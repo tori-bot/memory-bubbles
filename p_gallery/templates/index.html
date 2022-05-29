@@ -3,4 +3,23 @@
 {{block.super}}
 
 <h1>{{welcome}} </h1>
+
+<div class="container">
+    <div class="row">
+        {% for item in images %}
+        <div class="row">
+            <img src="{{item.image.url}}" class="img-responsive" alt="Image">
+           
+            <h1>{{item.image_name}}</h1>
+            <h3>{{item.image_category}} | {{item.image_location}} </h3>
+            <h5>Uploaded: {{item.published | timesince}} ago</h5>
+            <br>
+            <p>{{item.image_description}} </p>
+        </div>
+        {% empty %}
+      <h4>You don't have any images yet</h4>
+        {% endfor %}
+        
+    </div>
+</div>
 {% endblock %}

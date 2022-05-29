@@ -26,13 +26,18 @@ class Image(models.Model):
 
     @classmethod
     def search_image(cls,category):
-        image=cls.objects.filter(category__icontains=category) 
-        return image
+        images=cls.objects.filter(image_category__icontains=category) 
+        return images
 
     @classmethod
     def copy_image(cls,id):
         image=cls.objects.get(id=id)
         pyperclip.copy(image.image)
+
+    @classmethod
+    def location_find(cls,location):
+        images=cls.objects.filter(location=location)
+        return images
 
     def __str__(self):
         return self.image_name
