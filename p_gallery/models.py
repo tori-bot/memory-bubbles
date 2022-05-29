@@ -1,5 +1,6 @@
 from django.db import models
 import datetime as dt
+import pyperclip
 # Create your models here.
 class Image(models.Model):
     image = models.ImageField(upload_to='photo/',null=True)
@@ -27,6 +28,11 @@ class Image(models.Model):
     def search_image(cls,category):
         image=cls.objects.filter(category__icontains=category) 
         return image
+
+    @classmethod
+    def copy_image(cls,id):
+        image=cls.objects.get(id=id)
+        pyperclip.copy(image.image)
 
     def __str__(self):
         return self.image_name
