@@ -34,11 +34,29 @@ class Image(models.Model):
 class Location(models.Model):
     place= models.CharField(max_length=30,null=True)
 
+    def save_image(self):
+        self.save()
+
+    def delete_image(self):
+        self.delete()
+
+    def update_image(self):
+        self.save()
+
     def __str__(self):
         return self.place
 
 class Category(models.Model):
     category=models.CharField(max_length=20,null=True)
+
+    def save_image(self):
+        self.save()
+
+    def delete_image(self):
+        self.delete()
+
+    def update_image(self):
+        self.save()
 
     def __str__(self):
         return self.category
