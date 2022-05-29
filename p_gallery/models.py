@@ -28,9 +28,17 @@ class Image(models.Model):
         image=cls.objects.filter(category__icontains=category) 
         return image
 
+    def __str__(self):
+        return self.image_name
 
 class Location(models.Model):
     place= models.CharField(max_length=30,null=True)
 
+    def __str__(self):
+        return self.place
+
 class Category(models.Model):
     category=models.CharField(max_length=20,null=True)
+
+    def __str__(self):
+        return self.category
