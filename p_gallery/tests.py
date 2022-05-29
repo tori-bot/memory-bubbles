@@ -29,3 +29,7 @@ class ImageTestCase(TestCase):
         term='school'
         results=Image.search_image(term)
         self.assertTrue(len(results)==0)
+
+    def test_copy_image(self):
+        image=Image.copy_image(id=1)
+        self.assertTrue(len(image)==0)
