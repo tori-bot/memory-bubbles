@@ -12,6 +12,15 @@ def home(request):
 
     return render(request,'index.html', {'welcome':welcome,'images':images,'categories':categories,'locations':locations})
 
+def category(request):
+    categories = Image.objects.order_by('image_category')
+    return render(request,'categories.html',{'categories':categories})
+
+
+def location(request):
+    locations = Image.objects.order_by('image_location')
+    return render(request,'location.html',{'locations':locations} )
+
 def search(request):
     if 'image' in request.GET and request.GET['image']:
         #check if the image query exists in our request.GET object and then we then check if it has a value

@@ -23,9 +23,7 @@ body{
 .two{
     color: orange;
 }
-#contact-tab-pane ul{
-    list-style: none;
-}
+
 .card button{
     background-color: orange;
     color: black;
@@ -33,6 +31,21 @@ body{
     width: 5vw;
     margin: 2vh 10vw;
 
+}
+.contact{
+    margin-top: 5vh;
+    background-color: orange;
+    padding: 5vh 10vw;
+}
+.contact ul{
+    list-style-type: none;
+}
+.contact li{
+    margin-top: 2vh;
+}
+.contact a{
+    color: black;
+    text-decoration: none;
 }
 .nav{
     margin-top: 2vh;
@@ -71,4 +84,17 @@ body{
     object-fit: cover;
     width: 100%;
     height: 20vw;
+}
+.modal-header button{
+    position:absolute; top:0; right:0;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+.footer{
+    text-align: center;
+}
+.modal-header img{
+    object-fit: cover;
+    width: 100%;
 }
