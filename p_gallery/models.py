@@ -1,6 +1,6 @@
 from django.db import models
 import datetime as dt
-# import pyperclip
+#
 # from cloudinary.models import CloudinaryField
 # Create your models here.
 class Image(models.Model):

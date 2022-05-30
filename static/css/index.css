@@ -9,6 +9,8 @@ body{
     border: solid 2px orange;
     border-radius: 6px;
     margin-top: 5vh;
+    text-align: center;
+    height: 95vh;
 }
 .nav{
     margin-top: 2vh;

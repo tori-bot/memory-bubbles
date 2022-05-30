@@ -11,7 +11,7 @@
         {% for item in images %}
         
             
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="card">
                 <img src="{{item.image.url}}" class="img-responsive card-img-top" alt="Image">
            
@@ -22,16 +22,16 @@
             <br>
             <p>{{item.image_description}} </p>
             <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-4">
-                    <a href="#" class="btn image"><i class="bi bi-sunglasses"></i></a>
+                
+                <div class="col-md-6">
+                    <a href="{% url 'image' %} " class="btn image"><i class="bi bi-sunglasses"></i></a>
                 </div>
                
                 
-                <div class="col-md-4">
+                <div class="col-md-6">
                  <a href="#" class="btn image"><i class="bi bi-share-fill"></i></a>   
                 </div>
-                <div class="col-md-1"></div>
+                
             </div>    
                 </div>
                 
