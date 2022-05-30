@@ -1,4 +1,38 @@
 body{
-    background-color: white;
-    color: green;
+    background-color: black;
+    color: white;
+}
+
+.card{
+    background-color: black;
+    color: white;
+    border: solid 2px orange;
+    border-radius: 6px;
+    margin-top: 5vh;
+}
+.nav{
+    margin-top: 2vh;
+}
+.nav a{
+    color: orange;
+}
+.one{
+    color: white;
+}
+.navbar-brand{
+    font-style: italic;
+    font-weight: bolder;
+    font-family: cursive;
+    font-size: 2rem;
+}
+.navbar-form{
+    margin-top: 2vh;
+    margin-left: 15vw;
+}
+.input-group-btn i{
+    color: orange;
+}
+.welcome{
+    margin-top:5vh ;
+    text-align: center;
 }
