@@ -15,8 +15,16 @@ body{
 .modal{
     color: black;
 }
+.modal-footer button{
+    background-color: orange;
+    color: black;
+    border-radius: 6px;
+}
 .two{
     color: orange;
+}
+#contact-tab-pane ul{
+    list-style: none;
 }
 .card button{
     background-color: orange;

@@ -5,6 +5,8 @@ An application that contains a repository of my pictures for users to view.
 
 # Live link
 
+# Landing page
+![Memory Bubbles landing page](static/images/Screenshot_2022-05-30_11-12-33.png)
 # Technologies
 * Django 3.2
 * Python 3.9
