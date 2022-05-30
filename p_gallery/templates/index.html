@@ -11,13 +11,26 @@
         {% for item in images %}
         <div class="row">
             <div class="card">
-                <img src="{{item.image.url}}" class="img-responsive" alt="Image">
+                <img src="{{item.image.url}}" class="img-responsive card-img-top" alt="Image">
            
             <h1>{{item.image_name}}</h1>
-            <h3>{{item.image_category}} | {{item.image_location}} </h3>
-            <h5>Uploaded: {{item.published | timesince}} ago</h5>
+            <h3>{{item.image_category}}   </h3>
+            <h4>{{item.image_location}}</h4>
+            <h5>{{item.published | timesince}} ago</h5>
             <br>
             <p>{{item.image_description}} </p>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-4">
+                    <a href="#" class="btn image"><i class="bi bi-sunglasses"></i></a>
+                </div>
+               
+                
+                <div class="col-md-4">
+                 <a href="#" class="btn image"><i class="bi bi-share-fill"></i></a>   
+                </div>
+                <div class="col-md-1"></div>
+            </div>
             </div>
             
         </div>

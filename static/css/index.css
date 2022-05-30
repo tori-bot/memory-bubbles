@@ -36,3 +36,10 @@ body{
     margin-top:5vh ;
     text-align: center;
 }
+.image{
+    border-radius: 6px;
+    background-color: orange;
+    color: black;
+    margin-bottom: 2vh;
+    width: 10vw;
+}
