@@ -1,9 +1,11 @@
 from django.db import models
 import datetime as dt
 import pyperclip
+# from cloudinary.models import CloudinaryField
 # Create your models here.
 class Image(models.Model):
     image = models.ImageField(upload_to='photo/',null=True)
+    # image =CloudinaryField('image',null=True)
     image_name=models.CharField(max_length=20)
     image_description=models.TextField()
     image_location=models.ForeignKey('Location',on_delete=models.DO_NOTHING,null=True)

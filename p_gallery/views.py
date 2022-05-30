@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse,Http404
 from django.shortcuts import render
 from .models import Image
 # Create your views here.
@@ -6,7 +6,7 @@ from .models import Image
 #     return HttpResponse("hello world")
 def home(request):
     welcome="hello. welcome to Makena's memory bubbles."
-    images = Image.objects.order_by('published')
+    images = Image.objects.order_by('-published')
     categories = Image.objects.order_by('image_category')
     locations = Image.objects.order_by('image_location')
 
@@ -22,3 +22,10 @@ def search(request):
     else:
         message='Try searching for something'
         return render(request,'search.html',{'message':message})
+
+def image(request,image_id):
+    try:
+        image=Image.objects.get(id=image_id)
+    except Image.DoesNotExist:
+        raise Http404()
+    return render(request,'image.html',{'image':image} )

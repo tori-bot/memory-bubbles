@@ -14,9 +14,10 @@ from pathlib import Path
 import django_heroku
 import dj_database_url
 from decouple import config,Csv
+# import cloudinary,cloudinary.api,cloudinary.uploader
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-# BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -70,6 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -91,6 +93,11 @@ DATABASES = {
         'PORT': '',
     }
 }
+# cloudinary.config( 
+#   cloud_name = "dnsz8shfx", 
+#   api_key = "641878439427965", 
+#   api_secret = "0JG9bP_8I9ankDR7lKqjjGzROFg" 
+# )
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
@@ -132,7 +139,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
