@@ -9,7 +9,7 @@ from django.conf.urls import url
 urlpatterns=[
     path('',views.home,name='home'),
     path('/search',views.search,name='search'),
-    url(r'^image/(\d+)',views.image,name='image')
+    path('/image',views.image,name='image')
     
 ]
 

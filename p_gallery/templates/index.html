@@ -9,8 +9,10 @@
 <div class="container">
     <div class="row">
         {% for item in images %}
-        <div class="row">
-            <div class="card">
+        
+            
+                <div class="col-md-3">
+                    <div class="card">
                 <img src="{{item.image.url}}" class="img-responsive card-img-top" alt="Image">
            
             <h1>{{item.image_name}}</h1>
@@ -30,10 +32,12 @@
                  <a href="#" class="btn image"><i class="bi bi-share-fill"></i></a>   
                 </div>
                 <div class="col-md-1"></div>
-            </div>
+            </div>    
+                </div>
+                
             </div>
             
-        </div>
+        
         {% empty %}
       <h4>You don't have any images yet</h4>
         {% endfor %}

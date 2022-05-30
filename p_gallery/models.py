@@ -1,6 +1,6 @@
 from django.db import models
 import datetime as dt
-import pyperclip
+# import pyperclip
 # from cloudinary.models import CloudinaryField
 # Create your models here.
 class Image(models.Model):
@@ -31,10 +31,10 @@ class Image(models.Model):
         images=cls.objects.filter(image_category__name__icontains=search_term) 
         return images
 
-    @classmethod
-    def copy_image(cls,id):
-        image=cls.objects.get(id=id)
-        pyperclip.copy(image.image)
+    # @classmethod
+    # def copy_image(cls,id):
+    #     image=cls.objects.get(id=id)
+    #     pyperclip.copy(image.image)
 
     @classmethod
     def location_find(cls,location):
