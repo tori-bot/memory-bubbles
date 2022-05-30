@@ -13,19 +13,16 @@ def home(request):
     return render(request,'index.html', {'welcome':welcome,'images':images,'categories':categories,'locations':locations})
 
 def search(request):
-    if 'images' in request.GET and request.GET['images']:
+    if 'image' in request.GET and request.GET['image']:
         #check if the image query exists in our request.GET object and then we then check if it has a value
-        search_term = request.GET.get('images')
+        
+        search_term = request.GET['image']
         searched_images=Image.search_image(search_term)
+        
         message=f'{search_term} '
         return render(request,'search.html',{'searched_images':searched_images,'message':message})
     else:
         message='Try searching for something'
         return render(request,'search.html',{'message':message})
 
-def image(request):
-    try:
-        image=Image.get_image_by_id(id)
-    except Image.DoesNotExist:
-        raise Http404()
-    return render(request,'image.html',{'image':image} )
+
