@@ -25,7 +25,7 @@ def search(request):
 
 def image(request):
     try:
-        image=Image.get_image_by_id()
+        image=Image.get_image_by_id(id)
     except Image.DoesNotExist:
         raise Http404()
     return render(request,'image.html',{'image':image} )

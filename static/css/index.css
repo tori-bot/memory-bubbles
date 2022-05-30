@@ -10,7 +10,21 @@ body{
     border-radius: 6px;
     margin-top: 5vh;
     text-align: center;
-    height: 95vh;
+   
+}
+.modal{
+    color: black;
+}
+.two{
+    color: orange;
+}
+.card button{
+    background-color: orange;
+    color: black;
+    border-radius: 6px;
+    width: 5vw;
+    margin: 2vh 10vw;
+
 }
 .nav{
     margin-top: 2vh;

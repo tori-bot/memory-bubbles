@@ -9,33 +9,39 @@
 <div class="container">
     <div class="row">
         {% for item in images %}
-        
-            
-                <div class="col-md-4">
+        <div class="col-md-4">
                     <div class="card">
-                <img src="{{item.image.url}}" class="img-responsive card-img-top" alt="Image">
-           
-            <h1>{{item.image_name}}</h1>
-            <h3>{{item.image_category}}   </h3>
-            <h4>{{item.image_location}}</h4>
-            <h5>{{item.published | timesince}} ago</h5>
-            <br>
-            <p>{{item.image_description}} </p>
-            <div class="row">
-                
-                <div class="col-md-6">
-                    <a href="{% url 'image' %} " class="btn image"><i class="bi bi-sunglasses"></i></a>
+        <!-- Button trigger modal -->
+        <img src="{{item.image.url}}" class="img-responsive card-img-top" alt="Image">
+        <h3>{{item.image_name}}</h3>
+        <h5>{{item.published | timesince}} ago</h5>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="bi bi-info-square-fill"></i>
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">{{item.image_location}}   
+            </h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-               
-                
-                <div class="col-md-6">
-                 <a href="#" class="btn image"><i class="bi bi-share-fill"></i></a>   
+                <div class="modal-body">
+                <h5>Category ~ <span class="two" >{{item.image_category}}</span></h5>
+                <p>{{item.image_description}} </p>
                 </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 
-            </div>    
                 </div>
-                
             </div>
+            </div>
+        </div>
+        </div>
+        </div>
+      
             
         
         {% empty %}
