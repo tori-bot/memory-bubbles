@@ -13,13 +13,12 @@ memory-bubbles.herokuapp.com/
 * Postgresql
 * Heroku
 # Setup
-* An electronic device with access to the internet
-* Clone the repository '''git clone https://github.com/tori-bot/photo-gallery'''
-* '''cd photo-gallery'''
-* Install all requirements '''pip install -r requirements.txt'''
-* Test the application '''python3 manage.py test'''
-* Run server '''python3 manage.py runserver'''
-* Follow the local host link '''127.0.0.1:8000''' to view application on your browser.
+* * Clone the repository ```git clone https://github.com/tori-bot/photo-gallery```
+* ```cd photo-gallery```
+* Install all requirements ```pip install -r requirements.txt```
+* Test the application ```python3 manage.py test```
+* Run server ```python3 manage.py runserver```
+* Follow the local host link ```127.0.0.1:8000``` to view application on your browser.
 
 # known bugs
 None
